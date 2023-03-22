@@ -1,0 +1,80 @@
+@import "cssreset-min";
+
+@font-face {
+	font-family: Cinzel;
+	src: url("/fonts/Cinzel-Regular.woff2") format("woff2"),
+		url("/fonts/Cinzel-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	background-color: #aeadb6;
+}
+
+body {
+	color: #fffcf2;
+	font-family: sans-serif;
+}
+
+.container {
+	margin: auto;
+	height: 100vh;
+	text-align: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+main {
+	padding-top: 40px;
+}
+
+section.support {
+	padding-bottom: 10px;
+}
+
+a {
+	color: #262465;
+}
+
+.welcome {
+	margin-bottom: 2em;
+	text-shadow: #666 1px 1px;
+}
+
+.project {
+	display: block;
+}
+
+.project,
+.prefix,
+.animal {
+	font-family: Cinzel, serif;
+	font-size: 500%;
+	line-height: 0.84;
+	margin: 0;
+	text-shadow: #666 1px 1px;
+}
+
+h1 {
+	margin-bottom: 3em;
+}
+
+.hide {
+	display: none;
+}
+
+.spinner {
+	width: 200px;
+	height: 100px;
+	margin: auto;
+}
+
+button {
+	font-size: 1em;
+	letter-spacing: 3px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px outset #666;
+}
