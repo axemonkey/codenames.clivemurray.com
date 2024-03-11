@@ -2,6 +2,8 @@ import getData from './modules/get-data.js';
 import spinnerConfig from './modules/spinner-config.js';
 import {ucfirst} from './modules/tools.js';
 
+import {lapBanner} from './modules/lap-banner.js';
+
 const projectNamerData = {
 	assets: {
 		prefixes: [],
@@ -58,6 +60,8 @@ const initProjectNamer = () => {
 
 	getData('prefixes', checkLoadedStates);
 	getData('animals', checkLoadedStates);
+
+	lapBanner.init();
 };
 
 window.addEventListener('load', initProjectNamer);
