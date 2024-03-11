@@ -50,7 +50,7 @@
 
 	const lapBanner = {
 	  storageKey: 'loveAndPainkillers-banner-config',
-	  numberOfDaysToHideBanner: 2,
+	  numberOfDaysToHideBanner: 7,
 	  init: () => {
 	    // if not cookie
 	    if (lapBanner.cookieCheck()) {
@@ -70,8 +70,8 @@
 	  isCookieStillGood: cookieDismissed => {
 	    const now = Date.now(); // ms since epoch to now
 	    const since = now - cookieDismissed;
-	    const msInTwoDays = 1000 * 60 * 60 * 24 * lapBanner.numberOfDaysToHideBanner;
-	    if (since < msInTwoDays) {
+	    const daysToHideBannerInMs = 1000 * 60 * 60 * 24 * lapBanner.numberOfDaysToHideBanner;
+	    if (since < daysToHideBannerInMs) {
 	      return true;
 	    }
 	    return false;
@@ -94,7 +94,7 @@
 	  },
 	  assembleStyles: () => {
 	    let str = '';
-	    str += '.c-lap-banner {width: 100%;position: fixed;left: 0;bottom: 0;background: rgba(0, 0, 0, 90%); padding-top: 40px; @media (min-width: 600px) {padding-top: 0;} }';
+	    str += '.c-lap-banner {z-index: 9999; width: 100%;position: fixed;left: 0;bottom: 0;background: rgba(0, 0, 0, 90%); padding-top: 40px; @media (min-width: 600px) {padding-top: 0;} }';
 	    str += '.c-lap-banner * { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important; font-size: 22px !important; }';
 	    str += '.c-lap-banner strong {font-weight: bold;}';
 	    str += '.c-lap-banner p {color: #fff; margin-bottom: 1em;line-height: normal !important;}';
