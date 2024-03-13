@@ -12,6 +12,7 @@ TODO:
 * create "options"
   * force 3 syllables
 	* select categories
+* "about" thing, which says you shouldn't really use this
 
 */
 
