@@ -49,6 +49,7 @@ a {
 .welcome {
 	margin-bottom: 2em;
 	text-align: left;
+	display: none;
 }
 
 .project {
@@ -67,9 +68,10 @@ a {
 h1 {
 	margin-bottom: 2em;
 	font-weight: normal;
+	display: none;
 }
 
-.hide {
+p.another {
 	display: none;
 }
 
@@ -81,8 +83,15 @@ h1 {
 
 button {
 	font-size: 1em;
-	letter-spacing: 3px;
 	padding: 10px 20px;
 	border-radius: 50px;
 	border: none;
+}
+
+.js {
+	h1,
+	.another,
+	.welcome {
+		display: block;
+	}
 }

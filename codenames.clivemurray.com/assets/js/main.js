@@ -38,9 +38,7 @@ const start = () => {
 	var spinster = document.querySelector('.spinner');
 	spinster.remove();
 
-	document.querySelector('.welcome').classList.remove('hide');
-	document.querySelector('.another').classList.remove('hide');
-	document.querySelector('h1').classList.remove('hide');
+	document.body.classList.add('js');
 
 	generate();
 };
