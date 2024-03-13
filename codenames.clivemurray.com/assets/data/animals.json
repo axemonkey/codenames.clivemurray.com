@@ -1,318 +1,392 @@
 [
   {
     "title":        "baboon",
-    "attributes":   ["land", "mammal", "primate"]
+    "attributes":   ["land", "mammal", "primate"],
+    "syllables":    2
   },
   {
     "title":        "badger",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "bat",
-    "attributes":   ["air", "mammal"]
+    "attributes":   ["air", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "beaver",
-    "attributes":   ["cute", "mammal", "water"]
+    "attributes":   ["cute", "mammal", "water"],
+    "syllables":    2
   },
   {
     "title":        "beetle",
-    "attributes":   ["insect", "land", "crawly"]
+    "attributes":   ["insect", "land", "crawly"],
+    "syllables":    2
   },
   {
     "title":        "bunny",
-    "attributes":   ["cute", "land", "mammal"]
+    "attributes":   ["cute", "land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "chicken",
-    "attributes":   ["bird", "land"]
+    "attributes":   ["bird", "land"],
+    "syllables":    2
   },
   {
     "title":        "chimp",
-    "attributes":   ["land", "mammal", "primate"]
+    "attributes":   ["land", "mammal", "primate"],
+    "syllables":    1
   },
   {
     "title":        "cobra",
-    "attributes":   ["land", "reptile"]
+    "attributes":   ["land", "reptile"],
+    "syllables":    2
   },
   {
     "title":        "cow",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "crab",
-    "attributes":   ["crawly", "crustacean", "sea", "water"]
+    "attributes":   ["crawly", "crustacean", "sea", "water"],
+    "syllables":    1
   },
   {
     "title":        "crow",
-    "attributes":   ["air", "bird"]
+    "attributes":   ["air", "bird"],
+    "syllables":    1
   },
   {
     "title":        "dingo",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "dolphin",
-    "attributes":   ["mammal", "sea", "water"]
+    "attributes":   ["mammal", "sea", "water"],
+    "syllables":    2
   },
   {
     "title":        "donkey",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "dragon",
-    "attributes":   ["air", "mythical", "reptile"]
+    "attributes":   ["air", "mythical", "reptile"],
+    "syllables":    2
   },
   {
     "title":        "duck",
-    "attributes":   ["air", "bird", "water"]
+    "attributes":   ["air", "bird", "water"],
+    "syllables":    1
   },
   {
     "title":        "eagle",
-    "attributes":   ["air", "bird"]
+    "attributes":   ["air", "bird"],
+    "syllables":    2
   },
   {
     "title":        "ferret",
-    "attributes":   ["cute", "land", "mammal"]
+    "attributes":   ["cute", "land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "fox",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "frog",
-    "attributes":   ["amphibian", "water"]
+    "attributes":   ["amphibian", "water"],
+    "syllables":    1
   },
   {
     "title":        "gazelle",
-    "attributes":   ["land", "mammal"]
-  },
-  {
-    "title":        "gibbon",
-    "attributes":   ["land", "mammal", "primate"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "gecko",
-    "attributes":   ["land", "reptile"]
+    "attributes":   ["land", "reptile"],
+    "syllables":    2
   },
   {
     "title":        "gibbon",
-    "attributes":   ["land", "mammal", "primate"]
+    "attributes":   ["land", "mammal", "primate"],
+    "syllables":    2
   },
   {
     "title":        "goat",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "goose",
-    "attributes":   ["air", "bird"]
+    "attributes":   ["air", "bird"],
+    "syllables":    1
   },
   {
     "title":        "hippo",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "hawk",
-    "attributes":   ["air", "bird"]
+    "attributes":   ["air", "bird"],
+    "syllables":    1
   },
   {
     "title":        "hedgehog",
-    "attributes":   ["cute", "land", "mammal"]
+    "attributes":   ["cute", "land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "hog",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "horse",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "kestrel",
-    "attributes":   ["air", "bird"]
+    "attributes":   ["air", "bird"],
+    "syllables":    2
   },
   {
     "title":        "kitten",
-    "attributes":   ["cute", "land", "mammal"]
+    "attributes":   ["cute", "land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "kitty",
-    "attributes":   ["cute", "land", "mammal"]
+    "attributes":   ["cute", "land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "kraken",
-    "attributes":   ["mythical", "sea", "water"]
+    "attributes":   ["mythical", "sea", "water"],
+    "syllables":    2
   },
   {
     "title":        "lemur",
-    "attributes":   ["land", "mammal", "primate"]
+    "attributes":   ["land", "mammal", "primate"],
+    "syllables":    2
   },
   {
     "title":        "leopard",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "lion",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "lizard",
-    "attributes":   ["land", "reptile"]
+    "attributes":   ["land", "reptile"],
+    "syllables":    2
   },
   {
     "title":        "llama",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "lobster",
-    "attributes":   ["crustacean", "sea", "water"]
+    "attributes":   ["crustacean", "sea", "water"],
+    "syllables":    2
   },
   {
     "title":        "lynx",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "mantis",
-    "attributes":   ["land", "insect"]
+    "attributes":   ["land", "insect"],
+    "syllables":    2
   },
   {
     "title":        "mole",
-    "attributes":   ["cute", "land", "mammal"]
+    "attributes":   ["cute", "land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "mongoose",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "monkey",
-    "attributes":   ["land", "mammal", "primate"]
+    "attributes":   ["land", "mammal", "primate"],
+    "syllables":    2
   },
   {
     "title":        "otter",
-    "attributes":   ["cute", "mammal", "sea", "water"]
+    "attributes":   ["cute", "mammal", "sea", "water"],
+    "syllables":    2
   },
   {
     "title":        "panda",
-    "attributes":   ["cute", "land", "mammal"]
+    "attributes":   ["cute", "land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "panther",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "parrot",
-    "attributes":   ["air", "bird"]
+    "attributes":   ["air", "bird"],
+    "syllables":    2
   },
   {
     "title":        "penguin",
-    "attributes":   ["bird", "sea", "water"]
+    "attributes":   ["bird", "sea", "water"],
+    "syllables":    2
   },
   {
     "title":        "pig",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "pigeon",
-    "attributes":   ["air", "bird"]
+    "attributes":   ["air", "bird"],
+    "syllables":    2
   },
   {
     "title":        "pony",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "puppy",
-    "attributes":   ["cute", "land", "mammal"]
+    "attributes":   ["cute", "land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "puma",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "rabbit",
-    "attributes":   ["cute", "land", "mammal"]
+    "attributes":   ["cute", "land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "rat",
-    "attributes":   ["cute", "land", "mammal"]
+    "attributes":   ["cute", "land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "rhino",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "salmon",
-    "attributes":   ["fish", "sea", "water"]
+    "attributes":   ["fish", "sea", "water"],
+    "syllables":    2
   },
   {
     "title":        "serpent",
-    "attributes":   ["land", "reptile"]
+    "attributes":   ["land", "reptile"],
+    "syllables":    2
   },
   {
     "title":        "shark",
-    "attributes":   ["fish", "sea", "water"]
+    "attributes":   ["fish", "sea", "water"],
+    "syllables":    1
   },
   {
     "title":        "sheep",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "sparrow",
-    "attributes":   ["air", "bird"]
+    "attributes":   ["air", "bird"],
+    "syllables":    2
   },
   {
     "title":        "spider",
-    "attributes":   ["crawly", "land"]
+    "attributes":   ["crawly", "land"],
+    "syllables":    2
   },
   {
     "title":        "squid",
-    "attributes":   ["sea", "water"]
+    "attributes":   ["sea", "water"],
+    "syllables":    1
   },
   {
     "title":        "stag",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "stoat",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   },
   {
     "title":        "swan",
-    "attributes":   ["air", "bird", "water"]
+    "attributes":   ["air", "bird", "water"],
+    "syllables":    1
   },
   {
     "title":        "tiger",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "toad",
-    "attributes":   ["amphibian", "water"]
+    "attributes":   ["amphibian", "water"],
+    "syllables":    1
   },
   {
     "title":        "turkey",
-    "attributes":   ["bird", "land"]
+    "attributes":   ["bird", "land"],
+    "syllables":    2
   },
   {
     "title":        "turtle",
-    "attributes":   ["amphibian", "reptile", "sea", "water"]
+    "attributes":   ["amphibian", "reptile", "sea", "water"],
+    "syllables":    2
   },
   {
     "title":        "viper",
-    "attributes":   ["land", "reptile"]
+    "attributes":   ["land", "reptile"],
+    "syllables":    2
   },
   {
     "title":        "vixen",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "weasel",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    2
   },
   {
     "title":        "whale",
-    "attributes":   ["mammal", "sea", "water"]
+    "attributes":   ["mammal", "sea", "water"],
+    "syllables":    1
   },
   {
     "title":        "wolf",
-    "attributes":   ["land", "mammal"]
+    "attributes":   ["land", "mammal"],
+    "syllables":    1
   }
 ]

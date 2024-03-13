@@ -1,310 +1,382 @@
 [
     {
         "title":        "black",
-        "attributes":   ["colour"]
+        "attributes":   ["colour"],
+        "syllables":    1
     },
     {
         "title":        "blast",
-        "attributes":   ["science"]
+        "attributes":   ["science"],
+        "syllables":    1
     },
     {
         "title":        "blue",
-        "attributes":   ["colour"]
+        "attributes":   ["colour"],
+        "syllables":    1
     },
     {
         "title":        "brass",
-        "attributes":   ["material", "metal"]
+        "attributes":   ["material", "metal"],
+        "syllables":    1
     },
     {
         "title":        "bronze",
-        "attributes":   ["material", "metal", "precious"]
+        "attributes":   ["material", "metal", "precious"],
+        "syllables":    1
     },
     {
         "title":        "chrome",
-        "attributes":   ["material", "metal"]
+        "attributes":   ["material", "metal"],
+        "syllables":    1
     },
     {
         "title":        "chunky",
-        "attributes":   ["physical"]
+        "attributes":   ["physical"],
+        "syllables":    2
     },
     {
         "title":        "crystal",
-        "attributes":   ["material"]
+        "attributes":   ["material"],
+        "syllables":    2
     },
     {
         "title":        "death",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    1
     },
     {
         "title":        "diamond",
-        "attributes":   ["earth", "material", "precious"]
+        "attributes":   ["earth", "material", "precious"],
+        "syllables":    2
     },
     {
         "title":        "earth",
-        "attributes":   ["earth", "environmental"]
+        "attributes":   ["earth", "environmental"],
+        "syllables":    1
     },
     {
         "title":        "electric",
-        "attributes":   ["science"]
+        "attributes":   ["science"],
+        "syllables":    3
     },
     {
         "title":        "electro",
-        "attributes":   ["musical", "science"]
+        "attributes":   ["musical", "science"],
+        "syllables":    3
     },
     {
         "title":        "fat",
-        "attributes":   ["physical"]
+        "attributes":   ["physical"],
+        "syllables":    1
     },
     {
         "title":        "fire",
-        "attributes":   ["elemental"]
+        "attributes":   ["elemental"],
+        "syllables":    1
     },
     {
         "title":        "forest",
-        "attributes":   ["earth", "environmental"]
+        "attributes":   ["earth", "environmental"],
+        "syllables":    2
     },
     {
         "title":        "future",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    2
     },
     {
         "title":        "ghost",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    1
     },
     {
         "title":        "giga",
-        "attributes":   ["superlative"]
+        "attributes":   ["superlative"],
+        "syllables":    2
     },
     {
         "title":        "glass",
-        "attributes":   ["material"]
+        "attributes":   ["material"],
+        "syllables":    1
     },
     {
         "title":        "gold",
-        "attributes":   ["material", "metal", "precious"]
+        "attributes":   ["material", "metal", "precious"],
+        "syllables":    1
     },
     {
         "title":        "granite",
-        "attributes":   ["material", "stone"]
+        "attributes":   ["material", "stone"],
+        "syllables":    2
     },
     {
         "title":        "green",
-        "attributes":   ["colour"]
+        "attributes":   ["colour"],
+        "syllables":    1
     },
     {
         "title":        "grey",
-        "attributes":   ["colour"]
+        "attributes":   ["colour"],
+        "syllables":    1
     },
     {
         "title":        "heavy",
-        "attributes":   ["physical"]
+        "attributes":   ["physical"],
+        "syllables":    2
     },
     {
         "title":        "hydro",
-        "attributes":   ["science", "water"]
+        "attributes":   ["science", "water"],
+        "syllables":    2
     },
     {
         "title":        "hyper",
-        "attributes":   ["superlative"]
+        "attributes":   ["superlative"],
+        "syllables":    2
     },
     {
         "title":        "ice",
-        "attributes":   ["elemental", "physical", "water"]
+        "attributes":   ["elemental", "physical", "water"],
+        "syllables":    1
     },
     {
         "title":        "iron",
-        "attributes":   ["material", "metal"]
+        "attributes":   ["material", "metal"],
+        "syllables":    2
     },
     {
         "title":        "jade",
-        "attributes":   ["material", "precious", "stone"]
+        "attributes":   ["material", "precious", "stone"],
+        "syllables":    1
     },
     {
         "title":        "jazz",
-        "attributes":   ["musical"]
+        "attributes":   ["musical"],
+        "syllables":    1
     },
     {
         "title":        "laser",
-        "attributes":   ["science"]
+        "attributes":   ["science"],
+        "syllables":    2
     },
     {
         "title":        "leather",
-        "attributes":   ["material"]
+        "attributes":   ["material"],
+        "syllables":    2
     },
     {
         "title":        "life",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    1
     },
     {
         "title":        "light",
-        "attributes":   ["metaphysical", "physical", "science"]
+        "attributes":   ["metaphysical", "physical", "science"],
+        "syllables":    1
     },
     {
         "title":        "lone",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    1
     },
     {
         "title":        "lunar",
-        "attributes":   ["environmental", "space"]
+        "attributes":   ["environmental", "space"],
+        "syllables":    2
     },
     {
         "title":        "mega",
-        "attributes":   ["superlative"]
+        "attributes":   ["superlative"],
+        "syllables":    2
     },
     {
         "title":        "metal",
-        "attributes":   ["material", "metal", "musical"]
+        "attributes":   ["material", "metal", "musical"],
+        "syllables":    2
     },
     {
         "title":        "monster",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    2
     },
     {
         "title":        "moon",
-        "attributes":   ["environmental", "space"]
+        "attributes":   ["environmental", "space"],
+        "syllables":    1
     },
     {
         "title":        "mountain",
-        "attributes":   ["environmental"]
+        "attributes":   ["environmental"],
+        "syllables":    2
     },
     {
         "title":        "nuclear",
-        "attributes":   ["science"]
+        "attributes":   ["science"],
+        "syllables":    2
     },
     {
         "title":        "ocean",
-        "attributes":   ["environmental", "water"]
+        "attributes":   ["environmental", "water"],
+        "syllables":    2
     },
     {
         "title":        "onyx",
-        "attributes":   ["material", "precious", "stone"]
+        "attributes":   ["material", "precious", "stone"],
+        "syllables":    2
     },
     {
         "title":        "power",
-        "attributes":   ["metaphysical", "science"]
+        "attributes":   ["metaphysical", "science"],
+        "syllables":    2
     },
     {
         "title":        "pink",
-        "attributes":   ["colour"]
+        "attributes":   ["colour"],
+        "syllables":    1
     },
     {
         "title":        "punk",
-        "attributes":   ["musical"]
+        "attributes":   ["musical"],
+        "syllables":    1
     },
     {
         "title":        "red",
-        "attributes":   ["colour"]
+        "attributes":   ["colour"],
+        "syllables":    1
     },
     {
         "title":        "rock",
-        "attributes":   ["earth", "material", "musical", "stone"]
+        "attributes":   ["earth", "material", "musical", "stone"],
+        "syllables":    1
     },
     {
         "title":        "sapphire",
-        "attributes":   ["material", "precious", "stone"]
+        "attributes":   ["material", "precious", "stone"],
+        "syllables":    2
     },
     {
         "title":        "sea",
-        "attributes":   ["environmental", "water"]
+        "attributes":   ["environmental", "water"],
+        "syllables":    1
     },
     {
         "title":        "shock",
-        "attributes":   ["metaphysical", "science"]
+        "attributes":   ["metaphysical", "science"],
+        "syllables":    1
     },
     {
         "title":        "silent",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    2
     },
     {
         "title":        "silver",
-        "attributes":   ["material", "metal", "precious"]
+        "attributes":   ["material", "metal", "precious"],
+        "syllables":    2
     },
     {
         "title":        "slime",
-        "attributes":   ["environmental"]
+        "attributes":   ["environmental"],
+        "syllables":    1
     },
     {
         "title":        "snow",
-        "attributes":   ["environmental", "water"]
+        "attributes":   ["environmental", "water"],
+        "syllables":    1
     },
     {
         "title":        "solar",
-        "attributes":   ["science", "space"]
+        "attributes":   ["science", "space"],
+        "syllables":    2
     },
     {
-        "title": "sonic",
-        "attributes": [
-            "science"
-        ]
+        "title":        "sonic",
+        "attributes":   ["science"],
+        "syllables":    2
     },
     {
-        "title": "song",
-        "attributes": [
-            "musical"
-        ]
+        "title":        "song",
+        "attributes":   ["musical"],
+        "syllables":    1
     },
     {
         "title":        "space",
-        "attributes":   ["environmental", "science", "space"]
+        "attributes":   ["environmental", "science", "space"],
+        "syllables":    1
     },
     {
         "title":        "stealth",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    1
     },
     {
         "title":        "steel",
-        "attributes":   ["material", "metal"]
+        "attributes":   ["material", "metal"],
+        "syllables":    1
     },
     {
         "title":        "stone",
-        "attributes":   ["material", "stone"]
+        "attributes":   ["material", "stone"],
+        "syllables":    1
     },
     {
         "title":        "storm",
-        "attributes":   ["environmental"]
+        "attributes":   ["environmental"],
+        "syllables":    1
     },
     {
         "title":        "super",
-        "attributes":   ["superlative"]
+        "attributes":   ["superlative"],
+        "syllables":    2
     },
     {
         "title":        "terror",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    2
     },
     {
         "title":        "thunder",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    2
     },
     {
         "title":        "time",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    1
     },
     {
         "title":        "ultra",
-        "attributes":   ["superlative"]
+        "attributes":   ["superlative"],
+        "syllables":    2
     },
     {
         "title":        "urban",
-        "attributes":   ["environmental"]
+        "attributes":   ["environmental"],
+        "syllables":    2
     },
     {
         "title":        "water",
-        "attributes":   ["environmental", "water"]
+        "attributes":   ["environmental", "water"],
+        "syllables":    2
     },
     {
         "title":        "white",
-        "attributes":   ["colour"]
+        "attributes":   ["colour"],
+        "syllables":    1
     },
     {
         "title":        "wonder",
-        "attributes":   ["metaphysical"]
+        "attributes":   ["metaphysical"],
+        "syllables":    2
     },
     {
         "title":        "wooden",
-        "attributes":   ["material"]
+        "attributes":   ["material"],
+        "syllables":    2
     },
     {
         "title":        "yellow",
-        "attributes":   ["colour"]
+        "attributes":   ["colour"],
+        "syllables":    2
     }
 ]
