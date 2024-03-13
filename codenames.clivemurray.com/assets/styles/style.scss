@@ -1,33 +1,33 @@
-@import "cssreset-min";
-
-@font-face {
-	font-family: Cinzel;
-	src: url("/public/fonts/Cinzel-Regular.woff2") format("woff2"),
-		url("/public/fonts/Cinzel-Regular.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-
-html {
-	background-color: #aeadb6;
+* {
+	margin: 0;
+	padding: 0;
 }
 
 body {
+	background-color: #aeadb6;
 	color: #fffcf2;
-	font-family: sans-serif;
+	font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .container {
 	margin: auto;
-	height: 100vh;
+	height: 100svh;
 	text-align: center;
 	display: flex;
 	flex-flow: column nowrap;
-	justify-content: space-between;
+	justify-content: space-around;
+	align-items: center;
 }
 
 main {
+	width: 100%;
+	max-width: 800px;
 	padding-top: 40px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 section.support {
@@ -40,25 +40,25 @@ a {
 
 .welcome {
 	margin-bottom: 2em;
-	text-shadow: #666 1px 1px;
+	text-align: left;
 }
 
 .project {
 	display: block;
+	text-align: left;
 }
 
-.project,
 .prefix,
 .animal {
-	font-family: Cinzel, serif;
-	font-size: 500%;
+	font-size: 200%;
 	line-height: 0.84;
-	margin: 0;
-	text-shadow: #666 1px 1px;
+	letter-spacing: -0.15rem;
+	display: inline-block;
 }
 
 h1 {
 	margin-bottom: 3em;
+	font-weight: normal;
 }
 
 .hide {

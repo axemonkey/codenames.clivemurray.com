@@ -1,8 +1,19 @@
-import getData from './modules/get-data.js';
+import {getData} from './modules/get-data.js';
 import spinnerConfig from './modules/spinner-config.js';
 import {ucfirst} from './modules/tools.js';
 
 import {lapBanner} from './modules/lap-banner.js';
+
+/*
+
+TODO:
+
+* add syllables to all data
+* create "options"
+  * force 3 syllables
+	* select categories
+
+*/
 
 const projectNamerData = {
 	assets: {

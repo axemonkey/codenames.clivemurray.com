@@ -9,5 +9,7 @@ const getData = (objectName, callback) => {
 	xhttp.send();
 };
 
-export default getData;
+export {
+	getData,
+};
 

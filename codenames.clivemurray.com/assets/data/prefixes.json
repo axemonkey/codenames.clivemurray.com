@@ -232,8 +232,16 @@
         "attributes":   ["science", "space"]
     },
     {
-        "title":        "sonic",
-        "attributes":   ["science"]
+        "title": "sonic",
+        "attributes": [
+            "science"
+        ]
+    },
+    {
+        "title": "song",
+        "attributes": [
+            "musical"
+        ]
     },
     {
         "title":        "space",

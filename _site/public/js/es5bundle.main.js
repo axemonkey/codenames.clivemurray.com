@@ -144,6 +144,17 @@
 	  }
 	};
 
+	/*
+
+	TODO:
+
+	* add syllables to all data
+	* create "options"
+	  * force 3 syllables
+		* select categories
+
+	*/
+
 	const projectNamerData = {
 	  assets: {
 	    prefixes: [],
