@@ -14,9 +14,11 @@
     "prettify": "prettier './codenames.clivemurray.com/assets/styles/style.scss' --write",
     "stylelint": "stylelint './codenames.clivemurray.com/assets/styles/**/*.scss' --customSyntax postcss-scss",
     "build:copyassets": "node tooling/copy-assets.js codenames.clivemurray.com data",
+    "build:images": "node tooling/process-images.js codenames.clivemurray.com",
     "build:styles": "node tooling/build-css.js codenames.clivemurray.com",
     "build:js": "node tooling/build-js.js codenames.clivemurray.com",
     "watch:assets": "onchange './codenames.clivemurray.com/assets/data' -- npm run build:copyassets",
+    "watch:images": "onchange './codenames.clivemurray.com/assets/images/**/*' -- npm run build:images",
     "watch:styles": "onchange './codenames.clivemurray.com/assets/styles/**/*.scss' -- npm-run-all lint:styles build:styles",
     "watch:js": "onchange './codenames.clivemurray.com/assets/js/**/*.js' -- npm-run-all lint:js build:js"
   },
