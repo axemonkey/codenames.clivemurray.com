@@ -13,7 +13,7 @@
     "lint:styles": "npm-run-all prettify stylelint",
     "prettify": "prettier './codenames.clivemurray.com/assets/styles/style.scss' --write",
     "stylelint": "stylelint './codenames.clivemurray.com/assets/styles/**/*.scss' --customSyntax postcss-scss",
-    "build:copyassets": "node tooling/copy-assets.js codenames.clivemurray.com data,fonts",
+    "build:copyassets": "node tooling/copy-assets.js codenames.clivemurray.com data",
     "build:styles": "node tooling/build-css.js codenames.clivemurray.com",
     "build:js": "node tooling/build-js.js codenames.clivemurray.com",
     "watch:assets": "onchange './codenames.clivemurray.com/assets/data' -- npm run build:copyassets",

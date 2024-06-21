@@ -5,7 +5,7 @@ import {ucfirst} from './modules/tools.js';
 import {lapBanner} from './modules/lap-banner.js';
 
 /*
-
+// eslint-disable-next-line no-warning-comments
 TODO:
 
 * add syllables to all data

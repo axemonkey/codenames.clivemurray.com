@@ -103,7 +103,7 @@ async function processImagesFunction(options) {
 
 				if (['.ico'].includes(fileExtension)) {
 					// just copy it
-					if (fs.statSync(filePath).isFile()) {
+					if (fs.statSync(filePath).isFile()) { // eslint-disable-line max-depth
 						const destinationFile = `${options.destination}/${imageFile}`;
 						fs.copyFileSync(filePath, destinationFile);
 
