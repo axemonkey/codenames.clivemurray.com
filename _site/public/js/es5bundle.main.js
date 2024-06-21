@@ -170,6 +170,22 @@
 	const generate = () => {
 	  writeThing('prefixes', 'prefix');
 	  writeThing('animals', 'animal');
+	  const iterations = 60;
+	  const currentIteration = 0;
+	  writeOneThing(currentIteration, iterations);
+	};
+	const writeOneThing = (currentIteration, iterations) => {
+	  if (Math.round(Math.random()) < 0.5) {
+	    writeThing('prefixes', 'prefix');
+	  } else {
+	    writeThing('animals', 'animal');
+	  }
+	  const nextIteration = currentIteration + 1;
+	  if (nextIteration < iterations) {
+	    window.setTimeout(() => {
+	      writeOneThing(nextIteration, iterations);
+	    }, nextIteration * 3);
+	  }
 	};
 	const start = () => {
 	  var spinster = document.querySelector('.spinner');
