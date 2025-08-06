@@ -48,8 +48,6 @@
 	  return str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase();
 	};
 
-	// import {lapBanner} from './modules/lap-banner.js';
-
 	/*
 	// eslint-disable-next-line no-warning-comments
 	TODO:
@@ -124,8 +122,6 @@
 	  });
 	  getData('prefixes', checkLoadedStates);
 	  getData('animals', checkLoadedStates);
-
-	  // lapBanner.init();
 	};
 	if ('serviceWorker' in navigator) {
 	  window.addEventListener('load', function () {

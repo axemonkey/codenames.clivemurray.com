@@ -2,8 +2,6 @@ import {getData} from './modules/get-data.js';
 import spinnerConfig from './modules/spinner-config.js';
 import {ucfirst} from './modules/tools.js';
 
-// import {lapBanner} from './modules/lap-banner.js';
-
 /*
 // eslint-disable-next-line no-warning-comments
 TODO:
@@ -91,8 +89,6 @@ const initProjectNamer = () => {
 
 	getData('prefixes', checkLoadedStates);
 	getData('animals', checkLoadedStates);
-
-	// lapBanner.init();
 };
 
 if ('serviceWorker' in navigator) {
