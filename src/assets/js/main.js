@@ -91,15 +91,4 @@ const initProjectNamer = () => {
 	getData('animals', checkLoadedStates);
 };
 
-if ('serviceWorker' in navigator) {
-	window.addEventListener('load', function () {
-		navigator.serviceWorker
-			.register('/service-worker.js')
-			.then(_res => console.log('service worker registered'))
-			.catch(error => console.log('service worker not registered', error));
-	});
-} else {
-	console.log('serviceWorker not found in navigator');
-}
-
 window.addEventListener('load', initProjectNamer);
