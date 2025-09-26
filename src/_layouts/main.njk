@@ -4,10 +4,10 @@
   <title>Clive&lsquo;s Project Namer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/public/css/style-490a211.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/{{assets.style.css}}">
   <link rel="shortcut icon" href="/public/images/icons/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/public/images/icons/favicon.ico" type="image/x-icon">
-  <meta name="generator" content="Eleventy v3.1.2">
+  <meta name="generator" content="{{ eleventy.generator }}">
 
   <meta name="description" content="A tool for generating codenames for your super secret projects.">
   <meta name="keywords" content="codename, codenames, projects, names, fun">
@@ -32,33 +32,7 @@
 <body>
   <div class="container">
 
-    <nav>
-	<button id="menu-trigger"><span>Menu</span></button>
-	<ul id="menu">
-		<li><button id="options">Options</button></li>
-		<li><button id="about">About</button></li>
-	</ul>
-</nav>
-
-
-<main id="namer">
-	<p class="welcome">Welcome to...</p>
-	<h1>
-		<span class="project">Project</span>
-		<span class="name">
-			<span class="prefix"></span><span class="animal"></span>
-		</span>
-	</h1>
-	<p class="another">
-		<button>Regenerate</button>
-	</p>
-</main>
-
-<aside>
-	<h1>Sorry...</h1>
-	<p>This requires Javascript to work. 🙃</p>
-</aside>
-
+    {{ content | safe }}
 
     <footer>
       <section class="support">
@@ -71,7 +45,7 @@
   </div>
 
   <script src="/public/vendor/spin.min.js"></script>
-  <script type="module" src="/public/js/main-8cc6d10.js"></script>
+  <script type="module" src="/public/js/{{assets.main.js}}"></script>
 
 </body>
 </html>

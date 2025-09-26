@@ -31,7 +31,8 @@ const generate = () => {
 	writeThing('prefixes', 'prefix');
 	writeThing('animals', 'animal');
 
-	const iterations = 60;
+	// const iterations = 60;
+	const iterations = 20;
 	const currentIteration = 0;
 
 	writeOneThing(currentIteration, iterations);
@@ -62,33 +63,210 @@ const start = () => {
 	generate();
 };
 
-const checkLoadedStates = (objectName, response) => {
+const checkLoadedStates = (objectName, response, next) => {
 	projectNamerData.assets[objectName] = JSON.parse(response);
 	if (projectNamerData.assets.prefixes.length > 0 && projectNamerData.assets.animals.length > 0) {
-		start();
+		next();
 	}
 };
 
-const initProjectNamer = () => {
+const getAttributes = category => {
+	const categoryData = projectNamerData.assets[category];
+	const foundAttributes = [];
+	for (const item of categoryData) {
+		for (const itemAttribute of item.attributes) {
+			if (foundAttributes.indexOf(itemAttribute) === -1) {
+				foundAttributes.push(itemAttribute);
+			}
+		}
+	}
+	foundAttributes.sort();
+
+	console.log(`attributes found for ${category}:`);
+	console.log(foundAttributes);
+	return foundAttributes;
+};
+
+
+const countOutputs = () => {
+	const categories = ['prefixes', 'animals'];
+	let valid = true;
+
+	for (const category of categories) {
+		const fieldset = document.querySelector(`#${category}`);
+		const fieldsetButtons = fieldset.querySelector('.buttonContainer');
+		const outputs = [];
+		const attributes = fieldset.querySelectorAll('input:checked');
+		console.log(attributes);
+		for (const attribute of attributes) {
+			for (const item of projectNamerData.assets[category]) {
+				if (item.attributes.includes(attribute.value)) {
+					if (!outputs.includes(item)) {
+						outputs.push(item);
+					}
+				}
+			}
+		}
+
+		if (outputs.length === 0) {
+			valid = false;
+		}
+
+		while (fieldset.querySelector('.countHolder')) {
+			fieldset.querySelector('.countHolder').remove();
+		}
+
+		const countHolder = document.createElement('div');
+		countHolder.classList.add('countHolder');
+		countHolder.textContent = `${outputs.length} ${category} matched`;
+		fieldset.insertBefore(countHolder, fieldsetButtons);
+	}
+
+	const goButton = document.querySelector('#go');
+	// if (valid) {
+	// 	goButton.disabled = false;
+	// } else {}
+		goButton.disabled = !valid;
+};
+
+const setAllAttributes = (element, check) => {
+	const fieldset = element.closest('fieldset');
+	const checkboxes = fieldset.querySelectorAll('input');
+
+	for (const checkbox of checkboxes) {
+		checkbox.checked = check;
+	}
+
+	countOutputs();
+};
+
+const writeOptions = () => {
+	const categories = [
+		{
+			name: 'prefixes',
+		},
+		{
+			name: 'animals',
+		},
+	];
+
+	for (const category of categories) {
+		category.attributes = getAttributes(category.name);
+
+		const fieldset = document.querySelector(`fieldset#${category.name}`);
+
+		for (const attribute of category.attributes) {
+			const inputElement = document.createElement('input');
+			const inputName = `cb-${category.name}-${attribute}`;
+			inputElement.type = 'checkbox';
+			inputElement.name = inputName;
+			inputElement.id = inputName;
+			inputElement.value = attribute;
+			if (attribute.charAt(0) === 'p') {
+				inputElement.checked = 'checked';
+			}
+			inputElement.addEventListener('change', () => {
+				countOutputs();
+			});
+
+			const labelElement = document.createElement('label');
+			labelElement.setAttribute('for', inputName);
+			labelElement.textContent = attribute;
+
+			const containerElement = document.createElement('div');
+			containerElement.classList.add('attribute');
+			containerElement.append(inputElement);
+			containerElement.append(labelElement);
+			fieldset.append(containerElement);
+		}
+
+		const allButton = document.createElement('button');
+		allButton.textContent = 'All';
+		allButton.id = `all-${category.name}`;
+		allButton.addEventListener('click', event => {
+			setAllAttributes(event.target, true);
+		});
+
+		const noneButton = document.createElement('button');
+		noneButton.textContent = 'None';
+		noneButton.id = `none-${category.name}`;
+		noneButton.addEventListener('click', event => {
+			setAllAttributes(event.target, false);
+		});
+
+		const buttonContainer = document.createElement('div');
+		buttonContainer.classList.add('buttonContainer');
+		buttonContainer.append(allButton, noneButton);
+
+		fieldset.append(buttonContainer);
+	}
+
+	countOutputs();
+};
+
+const go = () => {
+	console.log('go');
+	const categories = ['prefixes', 'animals'];
+	const categoryStrings = [];
+
+	for (const category of categories) {
+		const selectedAttributes = [];
+		const fieldset = document.querySelector(`fieldset#${category}`);
+		const checkedOptions = fieldset.querySelectorAll(`input:checked`);
+		for (const checkedOption of checkedOptions) {
+			selectedAttributes.push(checkedOption.value);
+		}
+
+		categoryStrings.push(`${category}=${selectedAttributes.join(',')}`);
+	}
+
+	document.location.href = `/?${categoryStrings.join('&')}`;
+};
+
+const setupOptions = () => {
+	console.log('setupOptions');
+	getData('prefixes', checkLoadedStates, writeOptions);
+	getData('animals', checkLoadedStates, writeOptions);
+
+	document.querySelector('#go').addEventListener('click', () => {
+		go();
+	});
+};
+
+const setupMain = () => {
 	const spinster = document.createElement('div');
 	const headline = document.querySelector('h1');
 	spinster.classList.add('spinner');
 	headline.after(spinster);
 	new Spinner(spinnerConfig).spin(spinster); // eslint-disable-line no-undef
 
-	document.querySelector('.another').addEventListener('click', function (e) {
-		e.preventDefault();
+	document.querySelector('.another').addEventListener('click', () => {
 		generate();
 	});
-	document.querySelector('.prefix').addEventListener('click', function () {
+	document.querySelector('.prefix').addEventListener('click', () => {
 		writeThing('prefixes', 'prefix');
 	});
-	document.querySelector('.animal').addEventListener('click', function () {
+	document.querySelector('.animal').addEventListener('click', () => {
 		writeThing('animals', 'animal');
 	});
 
-	getData('prefixes', checkLoadedStates);
-	getData('animals', checkLoadedStates);
+	getData('prefixes', checkLoadedStates, start);
+	getData('animals', checkLoadedStates, start);
+};
+
+const initProjectNamer = () => {
+	document.documentElement.classList.add('js');
+
+	document.querySelector('#menu-trigger').addEventListener('click', event => {
+		event.target.closest('nav').classList.toggle('open');
+	});
+
+	if (document.querySelector('main#namer')) {
+		setupMain();
+	}
+	if (document.querySelector('main#options')) {
+		setupOptions();
+	}
 };
 
 window.addEventListener('load', initProjectNamer);

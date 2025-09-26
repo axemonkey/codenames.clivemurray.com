@@ -1,0 +1,47 @@
+#optionsFieldsets {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  fieldset + fieldset {
+    padding-left: 40px;
+  }
+
+  h2 {
+    margin-bottom : 1em;
+  }
+}
+
+.attribute {
+  text-align: left;
+  font-size: 1.5em;
+
+  input {
+    margin-right: 10px;
+  }
+}
+
+.buttonContainer {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+
+  button {
+    padding: 5px 10px;
+  }
+}
+
+.countHolder {
+  margin-top: 2em;
+}
+
+#go {
+  margin-top: 2em;
+}

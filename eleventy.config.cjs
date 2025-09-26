@@ -9,4 +9,11 @@ module.exports = function (eleventyConfig) {
 		],
 		showVersion: true,
 	});
+
+	return {
+		dir: {
+			includes: "_includes",
+			layouts: "_layouts",
+		}
+	}
 };

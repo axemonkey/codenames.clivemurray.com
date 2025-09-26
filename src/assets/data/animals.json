@@ -336,7 +336,7 @@
   },
   {
     "title":        "stoat",
-    "attributes":   ["land", "mammal"],
+    "attributes":   ["cute", "land", "mammal"],
     "syllables":    1
   },
   {
@@ -361,7 +361,7 @@
   },
   {
     "title":        "turtle",
-    "attributes":   ["amphibian", "reptile", "sea", "water"],
+    "attributes":   ["reptile", "sea", "water"],
     "syllables":    2
   },
   {
@@ -376,7 +376,7 @@
   },
   {
     "title":        "weasel",
-    "attributes":   ["land", "mammal"],
+    "attributes":   ["cute", "land", "mammal"],
     "syllables":    2
   },
   {
