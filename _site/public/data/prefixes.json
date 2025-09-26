@@ -210,6 +210,11 @@
         "syllables":    2
     },
     {
+        "title":        "mud",
+        "attributes":   ["earth", "environmental"],
+        "syllables":    1
+    },
+    {
         "title":        "nuclear",
         "attributes":   ["science"],
         "syllables":    2
@@ -347,6 +352,11 @@
     {
         "title":        "time",
         "attributes":   ["metaphysical"],
+        "syllables":    1
+    },
+    {
+        "title":        "tree",
+        "attributes":   ["environmental"],
         "syllables":    1
     },
     {
