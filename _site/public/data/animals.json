@@ -270,6 +270,11 @@
     "syllables":    2
   },
   {
+    "title":        "prawn",
+    "attributes":   ["crawly", "crustacean", "sea", "water"],
+    "syllables":    1
+  },
+  {
     "title":        "puppy",
     "attributes":   ["cute", "land", "mammal"],
     "syllables":    2
@@ -336,7 +341,7 @@
   },
   {
     "title":        "stoat",
-    "attributes":   ["land", "mammal"],
+    "attributes":   ["cute", "land", "mammal"],
     "syllables":    1
   },
   {
@@ -361,7 +366,7 @@
   },
   {
     "title":        "turtle",
-    "attributes":   ["amphibian", "reptile", "sea", "water"],
+    "attributes":   ["reptile", "sea", "water"],
     "syllables":    2
   },
   {
@@ -376,7 +381,7 @@
   },
   {
     "title":        "weasel",
-    "attributes":   ["land", "mammal"],
+    "attributes":   ["cute", "land", "mammal"],
     "syllables":    2
   },
   {
@@ -388,5 +393,10 @@
     "title":        "wolf",
     "attributes":   ["land", "mammal"],
     "syllables":    1
+  },
+  {
+    "title":        "wombat",
+    "attributes":   ["cute", "land", "marsupial"],
+    "syllables":    2
   }
 ]

@@ -305,6 +305,11 @@
         "syllables":    1
     },
     {
+        "title":        "star",
+        "attributes":   ["space"],
+        "syllables":    1
+    },
+    {
         "title":        "stealth",
         "attributes":   ["metaphysical"],
         "syllables":    1
