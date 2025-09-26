@@ -1,6 +1,9 @@
 import {getData} from './modules/get-data.js';
 import spinnerConfig from './modules/spinner-config.js';
-import {ucfirst} from './modules/tools.js';
+import {
+	ucfirst,
+	getParamFromURL,
+} from './modules/tools.js';
 
 /*
 // eslint-disable-next-line no-warning-comments
@@ -19,6 +22,38 @@ const projectNamerData = {
 		prefixes: [],
 		animals: [],
 	},
+};
+
+const reduce = () => {
+	const categories = ['prefixes', 'animals'];
+	const params = {};
+	let valid = true;
+
+	for (const category of categories) {
+		params[category] = getParamFromURL(category);
+		if (!params[category] || params[category].length === 0) {
+			valid = false;
+		}
+	}
+	if (valid) {
+		for (const category of categories) {
+			const categoryParams = params[category].split(',');
+			const outputs = [];
+
+			for (const categoryParam of categoryParams) {
+				for (const item of projectNamerData.assets[category]) {
+					if (item.attributes.includes(categoryParam)) {
+						if (!outputs.includes(item)) {
+							outputs.push(item);
+						}
+					}
+				}
+			}
+
+			projectNamerData.assets[category] = outputs;
+		}
+	}
+	start();
 };
 
 const writeThing = (arrayName, elementClass) => {
@@ -58,8 +93,6 @@ const start = () => {
 	var spinster = document.querySelector('.spinner');
 	spinster.remove();
 
-	document.body.classList.add('js');
-
 	generate();
 };
 
@@ -97,7 +130,7 @@ const countOutputs = () => {
 		const fieldsetButtons = fieldset.querySelector('.buttonContainer');
 		const outputs = [];
 		const attributes = fieldset.querySelectorAll('input:checked');
-		console.log(attributes);
+		// console.log(attributes);
 		for (const attribute of attributes) {
 			for (const item of projectNamerData.assets[category]) {
 				if (item.attributes.includes(attribute.value)) {
@@ -120,13 +153,12 @@ const countOutputs = () => {
 		countHolder.classList.add('countHolder');
 		countHolder.textContent = `${outputs.length} ${category} matched`;
 		fieldset.insertBefore(countHolder, fieldsetButtons);
+
+		console.log(`matched: ${outputs.map(item => item.title)}`);
 	}
 
 	const goButton = document.querySelector('#go');
-	// if (valid) {
-	// 	goButton.disabled = false;
-	// } else {}
-		goButton.disabled = !valid;
+	goButton.disabled = !valid;
 };
 
 const setAllAttributes = (element, check) => {
@@ -152,6 +184,8 @@ const writeOptions = () => {
 
 	for (const category of categories) {
 		category.attributes = getAttributes(category.name);
+		const categoryParams = getParamFromURL(category.name);
+		const categoryParamsArray = categoryParams ? categoryParams.split(',') : undefined;
 
 		const fieldset = document.querySelector(`fieldset#${category.name}`);
 
@@ -162,7 +196,7 @@ const writeOptions = () => {
 			inputElement.name = inputName;
 			inputElement.id = inputName;
 			inputElement.value = attribute;
-			if (attribute.charAt(0) === 'p') {
+			if (categoryParamsArray === undefined || categoryParamsArray.includes(attribute)) {
 				inputElement.checked = 'checked';
 			}
 			inputElement.addEventListener('change', () => {
@@ -250,8 +284,8 @@ const setupMain = () => {
 		writeThing('animals', 'animal');
 	});
 
-	getData('prefixes', checkLoadedStates, start);
-	getData('animals', checkLoadedStates, start);
+	getData('prefixes', checkLoadedStates, reduce);
+	getData('animals', checkLoadedStates, reduce);
 };
 
 const initProjectNamer = () => {
@@ -259,6 +293,11 @@ const initProjectNamer = () => {
 
 	document.querySelector('#menu-trigger').addEventListener('click', event => {
 		event.target.closest('nav').classList.toggle('open');
+	});
+
+	document.querySelector('#optionsButton').addEventListener('click', () => {
+		const searchStr = document.location.search;
+		document.location.href = `/options/${searchStr}`;
 	});
 
 	if (document.querySelector('main#namer')) {
