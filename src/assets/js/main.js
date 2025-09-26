@@ -67,7 +67,7 @@ const generate = () => {
 	writeThing('animals', 'animal');
 
 	// const iterations = 60;
-	const iterations = 20;
+	const iterations = 30;
 	const currentIteration = 0;
 
 	writeOneThing(currentIteration, iterations);
@@ -295,15 +295,16 @@ const initProjectNamer = () => {
 		event.target.closest('nav').classList.toggle('open');
 	});
 
-	document.querySelector('#optionsButton').addEventListener('click', () => {
+	document.querySelector('#nav-options').addEventListener('click', event => {
+		event.preventDefault();
 		const searchStr = document.location.search;
 		document.location.href = `/options/${searchStr}`;
 	});
 
-	if (document.querySelector('main#namer')) {
+	if (document.querySelector('main.namer')) {
 		setupMain();
 	}
-	if (document.querySelector('main#options')) {
+	if (document.querySelector('main.options')) {
 		setupOptions();
 	}
 };
