@@ -15,3 +15,27 @@
 	letter-spacing: -0.15rem;
 	display: inline-block;
 }
+
+.currentFilters {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	text-align: left;
+	max-width: 600px;
+
+	summary {
+		cursor: pointer;
+	}
+
+	.currentFiltersList {
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+
+	li {
+		list-style-type: none;
+	}
+	li:first-child {
+		margin-bottom: 5px;
+	}
+}

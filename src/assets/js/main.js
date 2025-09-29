@@ -35,7 +35,16 @@ const reduce = () => {
 			valid = false;
 		}
 	}
+
+	const currentFiltersDiv = document.querySelector('.currentFilters');
+
+	currentFiltersDiv.classList.add('hide');
+
 	if (valid) {
+		const currentFiltersListElement = document.createElement('div');
+		currentFiltersListElement.classList.add('currentFiltersList');
+		let listHTML = '<ul>';
+
 		for (const category of categories) {
 			const categoryParams = params[category].split(',');
 			const outputs = [];
@@ -51,7 +60,14 @@ const reduce = () => {
 			}
 
 			projectNamerData.assets[category] = outputs;
+
+			listHTML += `<li>${ucfirst(category)}: ${categoryParams.join(', ')}</li>`;
 		}
+
+		listHTML += '</ul>';
+		currentFiltersListElement.innerHTML = listHTML;
+		currentFiltersDiv.querySelector('details').append(currentFiltersListElement);
+		currentFiltersDiv.classList.remove('hide');
 	}
 	start();
 };
