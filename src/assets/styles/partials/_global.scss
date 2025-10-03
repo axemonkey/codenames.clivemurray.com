@@ -6,7 +6,11 @@
 body {
 	background-color: darkslateblue;
 	color: #fffcf2;
-	font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+	font-family:
+		"SF Pro Text",
+		-apple-system,
+		BlinkMacSystemFont,
+		sans-serif;
 }
 
 .hide {
@@ -31,7 +35,8 @@ hr {
 	width: 100%;
 }
 
-main, aside {
+main,
+aside {
 	width: 100%;
 	max-width: 800px;
 	padding-top: 40px;
@@ -55,17 +60,17 @@ footer > * {
 }
 
 main > * {
-  display: none;
+	display: none;
 }
 
 aside {
-  display: block;
+	display: block;
 }
 
 .js main > * {
-  display: block;
+	display: block;
 }
 
 .js aside {
-  display: none;
+	display: none;
 }

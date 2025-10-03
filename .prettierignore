@@ -3,4 +3,4 @@
 **/src/public
 **/_site
 **/.git
-package-lock.json
+**/package-lock.json

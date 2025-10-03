@@ -1,9 +1,6 @@
-import {getData} from './modules/get-data.js';
-import spinnerConfig from './modules/spinner-config.js';
-import {
-	ucfirst,
-	getParamFromURL,
-} from './modules/tools.js';
+import { getData } from "./modules/get-data.js";
+import spinnerConfig from "./modules/spinner-config.js";
+import { ucfirst, getParamFromURL } from "./modules/tools.js";
 
 /*
 // eslint-disable-next-line no-warning-comments
@@ -25,7 +22,7 @@ const projectNamerData = {
 };
 
 const reduce = () => {
-	const categories = ['prefixes', 'animals'];
+	const categories = ["prefixes", "animals"];
 	const params = {};
 	let valid = true;
 
@@ -36,17 +33,17 @@ const reduce = () => {
 		}
 	}
 
-	const currentFiltersDiv = document.querySelector('.currentFilters');
+	const currentFiltersDiv = document.querySelector(".currentFilters");
 
-	currentFiltersDiv.classList.add('hide');
+	currentFiltersDiv.classList.add("hide");
 
 	if (valid) {
-		const currentFiltersListElement = document.createElement('div');
-		currentFiltersListElement.classList.add('currentFiltersList');
-		let listHTML = '<ul>';
+		const currentFiltersListElement = document.createElement("div");
+		currentFiltersListElement.classList.add("currentFiltersList");
+		let listHTML = "<ul>";
 
 		for (const category of categories) {
-			const categoryParams = params[category].split(',');
+			const categoryParams = params[category].split(",");
 			const outputs = [];
 
 			for (const categoryParam of categoryParams) {
@@ -61,13 +58,15 @@ const reduce = () => {
 
 			projectNamerData.assets[category] = outputs;
 
-			listHTML += `<li>${ucfirst(category)}: ${categoryParams.join(', ')}</li>`;
+			listHTML += `<li>${ucfirst(category)}: ${categoryParams.join(", ")}</li>`;
 		}
 
-		listHTML += '</ul>';
+		listHTML += "</ul>";
 		currentFiltersListElement.innerHTML = listHTML;
-		currentFiltersDiv.querySelector('details').append(currentFiltersListElement);
-		currentFiltersDiv.classList.remove('hide');
+		currentFiltersDiv
+			.querySelector("details")
+			.append(currentFiltersListElement);
+		currentFiltersDiv.classList.remove("hide");
 	}
 	start();
 };
@@ -75,12 +74,14 @@ const reduce = () => {
 const writeThing = (arrayName, elementClass) => {
 	const array = projectNamerData.assets[arrayName];
 	const randomThing = array[Math.floor(Math.random() * array.length)];
-	document.querySelector(`.${elementClass}`).textContent = ucfirst(randomThing.title);
+	document.querySelector(`.${elementClass}`).textContent = ucfirst(
+		randomThing.title,
+	);
 };
 
 const generate = () => {
-	writeThing('prefixes', 'prefix');
-	writeThing('animals', 'animal');
+	writeThing("prefixes", "prefix");
+	writeThing("animals", "animal");
 
 	// const iterations = 60;
 	const iterations = 30;
@@ -91,9 +92,9 @@ const generate = () => {
 
 const writeOneThing = (currentIteration, iterations) => {
 	if (Math.round(Math.random()) < 0.5) {
-		writeThing('prefixes', 'prefix');
+		writeThing("prefixes", "prefix");
 	} else {
-		writeThing('animals', 'animal');
+		writeThing("animals", "animal");
 	}
 
 	const nextIteration = currentIteration + 1;
@@ -106,7 +107,7 @@ const writeOneThing = (currentIteration, iterations) => {
 };
 
 const start = () => {
-	var spinster = document.querySelector('.spinner');
+	var spinster = document.querySelector(".spinner");
 	spinster.remove();
 
 	generate();
@@ -114,12 +115,15 @@ const start = () => {
 
 const checkLoadedStates = (objectName, response, next) => {
 	projectNamerData.assets[objectName] = JSON.parse(response);
-	if (projectNamerData.assets.prefixes.length > 0 && projectNamerData.assets.animals.length > 0) {
+	if (
+		projectNamerData.assets.prefixes.length > 0 &&
+		projectNamerData.assets.animals.length > 0
+	) {
 		next();
 	}
 };
 
-const getAttributes = category => {
+const getAttributes = (category) => {
 	const categoryData = projectNamerData.assets[category];
 	const foundAttributes = [];
 	for (const item of categoryData) {
@@ -136,16 +140,15 @@ const getAttributes = category => {
 	return foundAttributes;
 };
 
-
 const countOutputs = () => {
-	const categories = ['prefixes', 'animals'];
+	const categories = ["prefixes", "animals"];
 	let valid = true;
 
 	for (const category of categories) {
 		const fieldset = document.querySelector(`#${category}`);
-		const fieldsetButtons = fieldset.querySelector('.buttonContainer');
+		const fieldsetButtons = fieldset.querySelector(".buttonContainer");
 		const outputs = [];
-		const attributes = fieldset.querySelectorAll('input:checked');
+		const attributes = fieldset.querySelectorAll("input:checked");
 		// console.log(attributes);
 		for (const attribute of attributes) {
 			for (const item of projectNamerData.assets[category]) {
@@ -161,25 +164,25 @@ const countOutputs = () => {
 			valid = false;
 		}
 
-		while (fieldset.querySelector('.countHolder')) {
-			fieldset.querySelector('.countHolder').remove();
+		while (fieldset.querySelector(".countHolder")) {
+			fieldset.querySelector(".countHolder").remove();
 		}
 
-		const countHolder = document.createElement('div');
-		countHolder.classList.add('countHolder');
+		const countHolder = document.createElement("div");
+		countHolder.classList.add("countHolder");
 		countHolder.textContent = `${outputs.length} ${category} matched`;
 		fieldset.insertBefore(countHolder, fieldsetButtons);
 
-		console.log(`matched: ${outputs.map(item => item.title)}`);
+		console.log(`matched: ${outputs.map((item) => item.title)}`);
 	}
 
-	const goButton = document.querySelector('#go');
+	const goButton = document.querySelector("#go");
 	goButton.disabled = !valid;
 };
 
 const setAllAttributes = (element, check) => {
-	const fieldset = element.closest('fieldset');
-	const checkboxes = fieldset.querySelectorAll('input');
+	const fieldset = element.closest("fieldset");
+	const checkboxes = fieldset.querySelectorAll("input");
 
 	for (const checkbox of checkboxes) {
 		checkbox.checked = check;
@@ -191,61 +194,66 @@ const setAllAttributes = (element, check) => {
 const writeOptions = () => {
 	const categories = [
 		{
-			name: 'prefixes',
+			name: "prefixes",
 		},
 		{
-			name: 'animals',
+			name: "animals",
 		},
 	];
 
 	for (const category of categories) {
 		category.attributes = getAttributes(category.name);
 		const categoryParams = getParamFromURL(category.name);
-		const categoryParamsArray = categoryParams ? categoryParams.split(',') : undefined;
+		const categoryParamsArray = categoryParams
+			? categoryParams.split(",")
+			: undefined;
 
 		const fieldset = document.querySelector(`fieldset#${category.name}`);
 
 		for (const attribute of category.attributes) {
-			const inputElement = document.createElement('input');
+			const inputElement = document.createElement("input");
 			const inputName = `cb-${category.name}-${attribute}`;
-			inputElement.type = 'checkbox';
+			inputElement.type = "checkbox";
 			inputElement.name = inputName;
 			inputElement.id = inputName;
 			inputElement.value = attribute;
-			if (categoryParamsArray === undefined || categoryParamsArray.includes(attribute)) {
-				inputElement.checked = 'checked';
+			if (
+				categoryParamsArray === undefined ||
+				categoryParamsArray.includes(attribute)
+			) {
+				inputElement.checked = "checked";
 			}
-			inputElement.addEventListener('change', () => {
+			inputElement.addEventListener("change", () => {
 				countOutputs();
 			});
 
-			const labelElement = document.createElement('label');
-			labelElement.setAttribute('for', inputName);
+			const labelElement = document.createElement("label");
+			labelElement.setAttribute("for", inputName);
 			labelElement.textContent = attribute;
 
-			const containerElement = document.createElement('div');
-			containerElement.classList.add('attribute');
+			const containerElement = document.createElement("div");
+			containerElement.classList.add("attribute");
 			containerElement.append(inputElement);
 			containerElement.append(labelElement);
 			fieldset.append(containerElement);
 		}
 
-		const allButton = document.createElement('button');
-		allButton.textContent = 'All';
+		const allButton = document.createElement("button");
+		allButton.textContent = "All";
 		allButton.id = `all-${category.name}`;
-		allButton.addEventListener('click', event => {
+		allButton.addEventListener("click", (event) => {
 			setAllAttributes(event.target, true);
 		});
 
-		const noneButton = document.createElement('button');
-		noneButton.textContent = 'None';
+		const noneButton = document.createElement("button");
+		noneButton.textContent = "None";
 		noneButton.id = `none-${category.name}`;
-		noneButton.addEventListener('click', event => {
+		noneButton.addEventListener("click", (event) => {
 			setAllAttributes(event.target, false);
 		});
 
-		const buttonContainer = document.createElement('div');
-		buttonContainer.classList.add('buttonContainer');
+		const buttonContainer = document.createElement("div");
+		buttonContainer.classList.add("buttonContainer");
 		buttonContainer.append(allButton, noneButton);
 
 		fieldset.append(buttonContainer);
@@ -255,8 +263,8 @@ const writeOptions = () => {
 };
 
 const go = () => {
-	console.log('go');
-	const categories = ['prefixes', 'animals'];
+	console.log("go");
+	const categories = ["prefixes", "animals"];
 	const categoryStrings = [];
 
 	for (const category of categories) {
@@ -267,62 +275,62 @@ const go = () => {
 			selectedAttributes.push(checkedOption.value);
 		}
 
-		categoryStrings.push(`${category}=${selectedAttributes.join(',')}`);
+		categoryStrings.push(`${category}=${selectedAttributes.join(",")}`);
 	}
 
-	document.location.href = `/?${categoryStrings.join('&')}`;
+	document.location.href = `/?${categoryStrings.join("&")}`;
 };
 
 const setupOptions = () => {
-	console.log('setupOptions');
-	getData('prefixes', checkLoadedStates, writeOptions);
-	getData('animals', checkLoadedStates, writeOptions);
+	console.log("setupOptions");
+	getData("prefixes", checkLoadedStates, writeOptions);
+	getData("animals", checkLoadedStates, writeOptions);
 
-	document.querySelector('#go').addEventListener('click', () => {
+	document.querySelector("#go").addEventListener("click", () => {
 		go();
 	});
 };
 
 const setupMain = () => {
-	const spinster = document.createElement('div');
-	const headline = document.querySelector('h1');
-	spinster.classList.add('spinner');
+	const spinster = document.createElement("div");
+	const headline = document.querySelector("h1");
+	spinster.classList.add("spinner");
 	headline.after(spinster);
 	new Spinner(spinnerConfig).spin(spinster); // eslint-disable-line no-undef
 
-	document.querySelector('.another').addEventListener('click', () => {
+	document.querySelector(".another").addEventListener("click", () => {
 		generate();
 	});
-	document.querySelector('.prefix').addEventListener('click', () => {
-		writeThing('prefixes', 'prefix');
+	document.querySelector(".prefix").addEventListener("click", () => {
+		writeThing("prefixes", "prefix");
 	});
-	document.querySelector('.animal').addEventListener('click', () => {
-		writeThing('animals', 'animal');
+	document.querySelector(".animal").addEventListener("click", () => {
+		writeThing("animals", "animal");
 	});
 
-	getData('prefixes', checkLoadedStates, reduce);
-	getData('animals', checkLoadedStates, reduce);
+	getData("prefixes", checkLoadedStates, reduce);
+	getData("animals", checkLoadedStates, reduce);
 };
 
 const initProjectNamer = () => {
-	document.documentElement.classList.add('js');
+	document.documentElement.classList.add("js");
 
-	document.querySelector('#menu-trigger').addEventListener('click', event => {
-		event.target.closest('nav').classList.toggle('open');
+	document.querySelector("#menu-trigger").addEventListener("click", (event) => {
+		event.target.closest("nav").classList.toggle("open");
 	});
 
-	document.querySelector('#nav-options').addEventListener('click', event => {
+	document.querySelector("#nav-options").addEventListener("click", (event) => {
 		event.preventDefault();
 		const searchStr = document.location.search;
 		document.location.href = `/options/${searchStr}`;
 	});
 
-	if (document.querySelector('main.namer')) {
+	if (document.querySelector("main.namer")) {
 		setupMain();
 	}
-	if (document.querySelector('main.options')) {
+	if (document.querySelector("main.options")) {
 		setupOptions();
 	}
 };
 
-window.addEventListener('load', initProjectNamer);
+window.addEventListener("load", initProjectNamer);

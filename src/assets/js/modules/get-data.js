@@ -5,11 +5,8 @@ const getData = (objectName, callback, next) => {
 			callback(objectName, xhttp.responseText, next);
 		}
 	};
-	xhttp.open('GET', `/public/data/${objectName}.json`, true);
+	xhttp.open("GET", `/public/data/${objectName}.json`, true);
 	xhttp.send();
 };
 
-export {
-	getData,
-};
-
+export { getData };
