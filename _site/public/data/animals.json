@@ -230,6 +230,15 @@
     "syllables":    2
   },
   {
+    "title": "mouse",
+    "attributes": [
+      "cute",
+      "land",
+      "mammal"
+    ],
+    "syllables": 1
+  },
+  {
     "title":        "otter",
     "attributes":   ["cute", "mammal", "sea", "water"],
     "syllables":    2
@@ -270,6 +279,16 @@
     "syllables":    2
   },
   {
+    "title": "possum",
+    "attributes": [
+      "cute",
+      "land",
+      "mammal",
+      "marsupial"
+    ],
+    "syllables": 2
+  },
+  {
     "title":        "prawn",
     "attributes":   ["crawly", "crustacean", "sea", "water"],
     "syllables":    1
@@ -282,6 +301,11 @@
   {
     "title":        "puma",
     "attributes":   ["land", "mammal"],
+    "syllables":    2
+  },
+  {
+    "title":        "quokka",
+    "attributes":   ["cute", "mammal", "marsupial"],
     "syllables":    2
   },
   {
@@ -396,7 +420,7 @@
   },
   {
     "title":        "wombat",
-    "attributes":   ["cute", "land", "marsupial"],
+    "attributes":   ["cute", "land", "mammal", "marsupial"],
     "syllables":    2
   }
 ]
