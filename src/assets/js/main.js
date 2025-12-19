@@ -4,13 +4,15 @@ import { ucfirst, getParamFromURL } from './modules/tools.js';
 
 /*
 // eslint-disable-next-line no-warning-comments
-TODO:
 
-* add syllables to all data
-* create "options"
-  * force 3 syllables
-	* select categories
+TODO:
+* force 3 syllables
+
+TO DONE:
 * "about" thing, which says you shouldn't really use this
+* create "options"
+* select categories
+* add syllables to all data
 
 */
 
