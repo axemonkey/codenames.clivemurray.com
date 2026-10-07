@@ -6,19 +6,22 @@
 	fieldset {
 		border: none;
 		padding: 0;
+		display: flex;
+		gap: 2em;
+		flex-direction: column;
 	}
 
 	fieldset + fieldset {
 		padding-left: 40px;
 	}
 
-	h2 {
-		margin-bottom: 1em;
-	}
-
 	label:hover {
 		text-decoration: underline;
 	}
+}
+
+.fieldWrapper {
+	flex-grow: 1;
 }
 
 .attribute {
@@ -32,7 +35,6 @@
 }
 
 .buttonContainer {
-	margin-top: 2em;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -41,14 +43,6 @@
 	button {
 		padding: 5px 10px;
 	}
-}
-
-.countHolder {
-	margin-top: 2em;
-}
-
-#go {
-	margin-top: 2em;
 }
 
 // checkboxes inspired by GOV.UK Design System - https://github.com/alphagov/govuk-frontend

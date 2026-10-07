@@ -50,10 +50,11 @@ const reduce = () => {
 
 			for (const categoryParam of categoryParams) {
 				for (const item of projectNamerData.assets[category]) {
-					if (item.attributes.includes(categoryParam)) {
-						if (!outputs.includes(item)) {
-							outputs.push(item);
-						}
+					if (
+						item.attributes.includes(categoryParam) &&
+						!outputs.includes(item)
+					) {
+						outputs.push(item);
 					}
 				}
 			}
@@ -154,10 +155,11 @@ const countOutputs = () => {
 		// console.log(attributes);
 		for (const attribute of attributes) {
 			for (const item of projectNamerData.assets[category]) {
-				if (item.attributes.includes(attribute.value)) {
-					if (!outputs.includes(item)) {
-						outputs.push(item);
-					}
+				if (
+					item.attributes.includes(attribute.value) &&
+					!outputs.includes(item)
+				) {
+					outputs.push(item);
 				}
 			}
 		}
@@ -173,7 +175,7 @@ const countOutputs = () => {
 		const countHolder = document.createElement('div');
 		countHolder.classList.add('countHolder');
 		countHolder.textContent = `${outputs.length} ${category} matched`;
-		fieldset.insertBefore(countHolder, fieldsetButtons);
+		fieldsetButtons.before(countHolder);
 
 		console.log(`matched: ${outputs.map((item) => item.title)}`);
 	}
@@ -211,6 +213,9 @@ const writeOptions = () => {
 			: undefined;
 
 		const fieldset = document.querySelector(`fieldset#${category.name}`);
+		const fieldWrapper = document.createElement('div');
+		fieldWrapper.classList.add('fieldWrapper');
+		fieldset.append(fieldWrapper);
 
 		for (const attribute of category.attributes) {
 			const inputElement = document.createElement('input');
@@ -237,7 +242,7 @@ const writeOptions = () => {
 			containerElement.classList.add('attribute');
 			containerElement.append(inputElement);
 			containerElement.append(labelElement);
-			fieldset.append(containerElement);
+			fieldWrapper.append(containerElement);
 		}
 
 		const allButton = document.createElement('button');

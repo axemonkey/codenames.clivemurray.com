@@ -11,7 +11,7 @@ export default defineConfig([
 			globals: { ...globals.browser },
 		},
 		rules: {
-			'comma-dangle': ['warn', 'always'],
+			'comma-dangle': ['warn', 'always-multiline'],
 		},
 	},
 	{

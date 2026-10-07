@@ -201,7 +201,7 @@
 	},
 	{
 		"title": "lobster",
-		"attributes": ["crustacean", "sea", "water"],
+		"attributes": ["crawly", "crustacean", "sea", "water"],
 		"syllables": 2
 	},
 	{
@@ -281,7 +281,7 @@
 	},
 	{
 		"title": "prawn",
-		"attributes": ["crawly", "crustacean", "sea", "water"],
+		"attributes": ["crustacean", "sea", "water"],
 		"syllables": 1
 	},
 	{
