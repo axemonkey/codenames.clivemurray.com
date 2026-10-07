@@ -1,7 +1,7 @@
-import { coreConfig } from './tooling/lint-configs/core.js';
-import { browserConfig } from './tooling/lint-configs/browser.js';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
+import { coreConfig } from './tooling/lint-configs/core.js';
+import { browserConfig } from './tooling/lint-configs/browser.js';
 
 export default defineConfig([
 	{
